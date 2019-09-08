@@ -8,4 +8,6 @@
     <string name="responseReceived">From https://api.openweathermap.org</string>
     <string name="minimum_temperature">Minimum Temperature</string>
     <string name="maximum_temperature">Maximum Temperature</string>
+    <string name="world_cities">World Cities</string>
+    <string name="current_weather_condition">Current weather condition</string>
 </resources>

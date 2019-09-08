@@ -1,0 +1,209 @@
+[
+  {
+    "id": 3746183,
+    "name": "Centro Habana",
+    "country": "CU",
+    "coord": {
+      "lon": -82.364166,
+      "lat": 23.13833
+    }
+  },
+  {
+    "id": 3566062,
+    "name": "Provincia de Camagüey",
+    "country": "CU",
+    "coord": {
+      "lon": -77.849998,
+      "lat": 21.35
+    }
+  },
+  {
+    "id": 3566067,
+    "name": "Camaguey",
+    "country": "CU",
+    "coord": {
+      "lon": -77.916939,
+      "lat": 21.380831
+    }
+  },
+  {
+    "id": 3564175,
+    "name": "Provincia de Ciego de Ávila",
+    "country": "CU",
+    "coord": {
+      "lon": -78.599998,
+      "lat": 21.9
+    }
+  },
+  {
+    "id": 3564178,
+    "name": "Ciego de Avila",
+    "country": "CU",
+    "coord": {
+      "lon": -78.76194,
+      "lat": 21.84
+    }
+  },
+  {
+    "id": 3550595,
+    "name": "Las Tunas",
+    "country": "CU",
+    "coord": {
+      "lon": -76.900002,
+      "lat": 21.1
+    }
+  },
+  {
+    "id": 3550598,
+    "name": "Las Tunas",
+    "country": "CU",
+    "coord": {
+      "lon": -76.951111,
+      "lat": 20.96167
+    }
+  },
+  {
+    "id": 3556965,
+    "name": "Provincia de Holguín",
+    "country": "CU",
+    "coord": {
+      "lon": -75.75,
+      "lat": 20.799999
+    }
+  },
+  {
+    "id": 3553478,
+    "name": "Havana",
+    "country": "CU",
+    "coord": {
+      "lon": -82.383041,
+      "lat": 23.13302
+    }
+  },
+  {
+    "id": 3556969,
+    "name": "Holguin",
+    "country": "CU",
+    "coord": {
+      "lon": -76.263062,
+      "lat": 20.88722
+    }
+  },
+  {
+    "id": 3558052,
+    "name": "Provincia Granma",
+    "country": "CU",
+    "coord": {
+      "lon": -77,
+      "lat": 20.25
+    }
+  },
+  {
+    "id": 3567597,
+    "name": "Bayamo",
+    "country": "CU",
+    "coord": {
+      "lon": -76.643333,
+      "lat": 20.379169
+    }
+  },
+  {
+    "id": 3536725,
+    "name": "Provincia de Santiago de Cuba",
+    "country": "CU",
+    "coord": {
+      "lon": -76,
+      "lat": 20.25
+    }
+  },
+  {
+    "id": 3536729,
+    "name": "Santiago de Cuba",
+    "country": "CU",
+    "coord": {
+      "lon": -75.821938,
+      "lat": 20.024719
+    }
+  },
+  {
+    "id": 3534168,
+    "name": "Provincia de Villa Clara",
+    "country": "CU",
+    "coord": {
+      "lon": -80,
+      "lat": 22.5
+    }
+  },
+  {
+    "id": 3537900,
+    "name": "Santa Clara",
+    "country": "CU",
+    "coord": {
+      "lon": -79.76667,
+      "lat": 22.16667
+    }
+  },
+  {
+    "id": 3558744,
+    "name": "Fomento",
+    "country": "CU",
+    "coord": {
+      "lon": -79.721672,
+      "lat": 22.103889
+    }
+  },
+  {
+    "id": 7668824,
+    "name": "Provincia Artemisa",
+    "country": "CU",
+    "coord": {
+      "lon": -82.756058,
+      "lat": 22.813999
+    }
+  },
+  {
+    "id": 3541999,
+    "name": "Rodas",
+    "country": "CU",
+    "coord": {
+      "lon": -80.55722,
+      "lat": 22.34083
+    }
+  },
+  {
+    "id": 3556077,
+    "name": "Jobabo",
+    "country": "CU",
+    "coord": {
+      "lon": -76.299438,
+      "lat": 20.96917
+    }
+  },
+  {
+    "id": 3557801,
+    "name": "Guanajay",
+    "country": "CU",
+    "coord": {
+      "lon": -82.6875,
+      "lat": 22.92639
+    }
+  },
+  {
+    "id": 3558315,
+    "name": "Gibara",
+    "country": "CU",
+    "coord": {
+      "lon": -76.131668,
+      "lat": 21.10972
+    }
+  },
+  {
+    "id": 3746938,
+    "name": "Baguanos",
+    "country": "CU",
+    "coord": {
+      "lon": -76.026939,
+      "lat": 20.751671
+    }
+  }
+]
