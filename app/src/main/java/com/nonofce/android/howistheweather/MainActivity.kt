@@ -82,6 +82,37 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun loadCities() {
+
+        val cityList: MutableList<WorldCity> = getListOfCities()
+
+        val me = this
+        binding.inner.citySpinner.apply {
+            adapter = CitySpinnerAdapter(me, cityList)
+            setSelection(0, false)
+
+            onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+
+                override fun onNothingSelected(parent: AdapterView<*>?) {
+                }
+
+                override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+                    val selectedCity = parent!!.getItemAtPosition(position) as WorldCity
+
+                    weatherViewModel.getWeatherInformation("" + selectedCity.id)
+                        .observe(me, androidx.lifecycle.Observer {
+                            processResponse(it)
+                        })
+                }
+            }
+        }
+
+        /*
+        Gson().fromJson(assets.open("city.list.json").bufferedReader(), WorldCity::class.java)
+        */
+
+    }
+
+    private fun getListOfCities(): MutableList<WorldCity> {
         val jsonFile = assets.open("city.short.list.json").bufferedReader().use {
             it.readText()
         }
@@ -94,27 +125,7 @@ class MainActivity : AppCompatActivity() {
             }
             cityList.add(city)
         }
-
-        val me = this
-        citySpinner.adapter = CitySpinnerAdapter(this, cityList)
-        citySpinner.setSelection(0, false)
-        citySpinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-
-            override fun onNothingSelected(parent: AdapterView<*>?) {
-
-            }
-
-            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
-                val selectedCity = parent!!.getItemAtPosition(position) as WorldCity
-
-                weatherViewModel.getWeatherInformation("" + selectedCity.id)
-                    .observe(me, androidx.lifecycle.Observer {
-                        processResponse(it)
-                    })
-            }
-        }
-
-        //Gson().fromJson(assets.open("city.list.json").bufferedReader(), WorldCity::class.java)
-
+        return cityList
     }
+
 }
