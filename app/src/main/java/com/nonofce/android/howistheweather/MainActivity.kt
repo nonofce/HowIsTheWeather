@@ -48,7 +48,6 @@ class MainActivity : AppCompatActivity() {
         }
 
         loadCities()
-        Log.i("MainActivity", "" + weatherViewModel.numRequests)
     }
 
     private fun processResponse(currentWeather: CurrentWeather) {

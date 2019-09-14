@@ -15,7 +15,6 @@ import org.json.JSONArray
 class WeatherViewModel(private val repository: WeatherRepository) : ViewModel() {
 
     var currentWeather: CurrentWeather
-    var numRequests: Int = 0
     var cityList: MutableList<WorldCity> = mutableListOf()
     var defaultCity: WorldCity? = null
     var currentSelection = 0
@@ -26,15 +25,8 @@ class WeatherViewModel(private val repository: WeatherRepository) : ViewModel() 
         Log.d("WeatherViewModel", "WeatherViewModel created")
 
     }
-    /*
-    val weatherInformation = liveData(Dispatchers.IO) {
-        val weatherResponse = repository.getWeatherInformation("3553478")
-        emit(weatherResponse)
-    }
-    */
 
     fun getWeatherInformation(cityId: String): LiveData<CurrentWeather> {
-        numRequests++
         return liveData(Dispatchers.IO) {
             try {
 
