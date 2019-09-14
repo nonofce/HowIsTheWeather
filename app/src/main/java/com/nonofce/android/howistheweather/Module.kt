@@ -1,5 +1,6 @@
 package com.nonofce.android.howistheweather
 
+import androidx.lifecycle.ViewModelProviders
 import com.google.gson.Gson
 import com.nonofce.android.howistheweather.data.WeatherApi
 import com.nonofce.android.howistheweather.repository.WeatherRepository

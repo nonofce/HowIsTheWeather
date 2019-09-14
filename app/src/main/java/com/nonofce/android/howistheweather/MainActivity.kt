@@ -1,6 +1,7 @@
 package com.nonofce.android.howistheweather
 
 import android.os.Bundle
+import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
@@ -8,7 +9,6 @@ import android.widget.AdapterView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.google.android.material.snackbar.Snackbar
-import com.google.gson.Gson
 import com.nonofce.android.howistheweather.data.response.WeatherResponse
 import com.nonofce.android.howistheweather.databinding.ActivityMainBinding
 import com.nonofce.android.howistheweather.domain.CurrentWeather
@@ -18,13 +18,11 @@ import com.nonofce.android.howistheweather.view.WeatherViewModel
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.content_main.*
-import org.json.JSONArray
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class MainActivity : AppCompatActivity() {
 
     private val weatherViewModel: WeatherViewModel by viewModel<WeatherViewModel>()
-    private var defaultCity: WorldCity? = null
     private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -34,12 +32,23 @@ class MainActivity : AppCompatActivity() {
 
         binding.fab.setOnClickListener {
 
-            val pos = (citySpinner.adapter as CitySpinnerAdapter).getPosition(defaultCity)
+            val pos = (citySpinner.adapter as CitySpinnerAdapter).getPosition(weatherViewModel.defaultCity)
             binding.inner.citySpinner.setSelection(pos)
 
         }
 
+        with(weatherViewModel) {
+            currentWeather.body?.let {
+                binding.inner.weatherMainData = it.main
+            }
+
+            icon?.let {
+                loadWeatherCondition(it)
+            }
+        }
+
         loadCities()
+        Log.i("MainActivity", "" + weatherViewModel.numRequests)
     }
 
     private fun processResponse(currentWeather: CurrentWeather) {
@@ -58,8 +67,12 @@ class MainActivity : AppCompatActivity() {
             binding.inner.weatherMainData = this
         }
 
-        val conditionUrl = "https://openweathermap.org/img/wn/" + response.weather[0].icon + "@2x.png"
-        Picasso.get().load(conditionUrl)
+        weatherViewModel.icon = response.weather[0].icon + "@2x.png"
+        loadWeatherCondition(weatherViewModel.icon as String)
+    }
+
+    private fun loadWeatherCondition(icon: String) {
+        Picasso.get().load("https://openweathermap.org/img/wn/" + icon)
             .resize(50, 50)
             .centerCrop()
             .into(binding.inner.weatherCondition)
@@ -82,12 +95,11 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun loadCities() {
-
-        val cityList: MutableList<WorldCity> = getListOfCities()
-
+//        val cityList: MutableList<WorldCity> = getListOfCities()
+        weatherViewModel.getListOfCities(assets)
         val me = this
         binding.inner.citySpinner.apply {
-            adapter = CitySpinnerAdapter(me, cityList)
+            adapter = CitySpinnerAdapter(me, weatherViewModel.cityList)
             setSelection(0, false)
 
             onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
@@ -96,12 +108,17 @@ class MainActivity : AppCompatActivity() {
                 }
 
                 override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
-                    val selectedCity = parent!!.getItemAtPosition(position) as WorldCity
+                    if (position != weatherViewModel.currentSelection) {
+                        val selectedCity = parent!!.getItemAtPosition(position) as WorldCity
 
-                    weatherViewModel.getWeatherInformation("" + selectedCity.id)
-                        .observe(me, androidx.lifecycle.Observer {
-                            processResponse(it)
-                        })
+                        weatherViewModel.getWeatherInformation("" + selectedCity.id)
+                            .observe(me, androidx.lifecycle.Observer {
+                                processResponse(it)
+                            })
+
+                        weatherViewModel.currentSelection = position
+
+                    }
                 }
             }
         }
@@ -110,22 +127,6 @@ class MainActivity : AppCompatActivity() {
         Gson().fromJson(assets.open("city.list.json").bufferedReader(), WorldCity::class.java)
         */
 
-    }
-
-    private fun getListOfCities(): MutableList<WorldCity> {
-        val jsonFile = assets.open("city.short.list.json").bufferedReader().use {
-            it.readText()
-        }
-        val cities = JSONArray(jsonFile)
-        val cityList: MutableList<WorldCity> = mutableListOf()
-        for (i in 0 until cities.length()) {
-            val city = Gson().fromJson(cities[i].toString(), WorldCity::class.java)
-            if (city.id == 3553478) {
-                defaultCity = city
-            }
-            cityList.add(city)
-        }
-        return cityList
     }
 
 }
