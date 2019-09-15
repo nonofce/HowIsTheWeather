@@ -1,5 +1,6 @@
 package com.nonofce.android.howistheweather.view
 
+import android.app.Application
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
@@ -26,8 +27,8 @@ class CitySpinnerAdapter(ctx: Context, cities: List<WorldCity>) : ArrayAdapter<W
         val view = convertView ?: LayoutInflater.from(context).inflate(R.layout.city_spinner, parent, false)
 
         city?.let {
-            view.cityName.text = it.name
-            view.cityCode.text = "(" + it.country + ")"
+            view.cityName.text = context.getString(R.string.cities_identifier, it.name)
+            view.cityCode.text = "  "
         }
 
         return view

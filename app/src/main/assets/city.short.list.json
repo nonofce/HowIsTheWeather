@@ -1,20 +1,83 @@
 [
   {
-    "id": 3746183,
-    "name": "Centro Habana",
+    "id": 3544091,
+    "name": "Pinar del Rio",
     "country": "CU",
     "coord": {
-      "lon": -82.364166,
-      "lat": 23.13833
+      "lon": -83.698059,
+      "lat": 22.4175
     }
   },
   {
-    "id": 3566062,
-    "name": "Provincia de Camagüey",
+    "id": 3568312,
+    "name": "Artemisa",
     "country": "CU",
     "coord": {
-      "lon": -77.849998,
-      "lat": 21.35
+      "lon": -82.76194,
+      "lat": 22.813061
+    }
+  },
+  {
+    "id": 3564073,
+    "name": "La Habana",
+    "country": "CU",
+    "coord": {
+      "lon": -82.300003,
+      "lat": 23.08333
+    }
+  },
+  {
+    "id": 7668827,
+    "name": "Mayabeque",
+    "country": "CU",
+    "coord": {
+      "lon": -82.147179,
+      "lat": 22.96155
+    }
+  },
+  {
+    "id": 3547394,
+    "name": "Matanzas",
+    "country": "CU",
+    "coord": {
+      "lon": -81.166672,
+      "lat": 22.66667
+    }
+  },
+  {
+    "id": 3564120,
+    "name": "Cienfuegos",
+    "country": "CU",
+    "coord": {
+      "lon": -80.5,
+      "lat": 22.299999
+    }
+  },
+  {
+    "id": 3534168,
+    "name": "Villa Clara",
+    "country": "CU",
+    "coord": {
+      "lon": -80,
+      "lat": 22.5
+    }
+  },
+  {
+    "id": 3540665,
+    "name": "Sancti Spíritus",
+    "country": "CU",
+    "coord": {
+      "lon": -79.25,
+      "lat": 22
+    }
+  },
+  {
+    "id": 3564175,
+    "name": "Ciego de Ávila",
+    "country": "CU",
+    "coord": {
+      "lon": -78.599998,
+      "lat": 21.9
     }
   },
   {
@@ -27,24 +90,6 @@
     }
   },
   {
-    "id": 3564175,
-    "name": "Provincia de Ciego de Ávila",
-    "country": "CU",
-    "coord": {
-      "lon": -78.599998,
-      "lat": 21.9
-    }
-  },
-  {
-    "id": 3564178,
-    "name": "Ciego de Avila",
-    "country": "CU",
-    "coord": {
-      "lon": -78.76194,
-      "lat": 21.84
-    }
-  },
-  {
     "id": 3550595,
     "name": "Las Tunas",
     "country": "CU",
@@ -54,30 +99,12 @@
     }
   },
   {
-    "id": 3550598,
-    "name": "Las Tunas",
+    "id": 3558052,
+    "name": "Granma",
     "country": "CU",
     "coord": {
-      "lon": -76.951111,
-      "lat": 20.96167
-    }
-  },
-  {
-    "id": 3556965,
-    "name": "Provincia de Holguín",
-    "country": "CU",
-    "coord": {
-      "lon": -75.75,
-      "lat": 20.799999
-    }
-  },
-  {
-    "id": 3553478,
-    "name": "Havana",
-    "country": "CU",
-    "coord": {
-      "lon": -82.383041,
-      "lat": 23.13302
+      "lon": -77,
+      "lat": 20.25
     }
   },
   {
@@ -90,33 +117,6 @@
     }
   },
   {
-    "id": 3558052,
-    "name": "Provincia Granma",
-    "country": "CU",
-    "coord": {
-      "lon": -77,
-      "lat": 20.25
-    }
-  },
-  {
-    "id": 3567597,
-    "name": "Bayamo",
-    "country": "CU",
-    "coord": {
-      "lon": -76.643333,
-      "lat": 20.379169
-    }
-  },
-  {
-    "id": 3536725,
-    "name": "Provincia de Santiago de Cuba",
-    "country": "CU",
-    "coord": {
-      "lon": -76,
-      "lat": 20.25
-    }
-  },
-  {
     "id": 3536729,
     "name": "Santiago de Cuba",
     "country": "CU",
@@ -126,84 +126,21 @@
     }
   },
   {
-    "id": 3534168,
-    "name": "Provincia de Villa Clara",
+    "id": 3557689,
+    "name": "Guantanamo",
     "country": "CU",
     "coord": {
-      "lon": -80,
-      "lat": 22.5
+      "lon": -75.209167,
+      "lat": 20.14444
     }
   },
   {
-    "id": 3537900,
-    "name": "Santa Clara",
+    "id": 3556608,
+    "name": "Isla de la Juventud",
     "country": "CU",
     "coord": {
-      "lon": -79.76667,
-      "lat": 22.16667
-    }
-  },
-  {
-    "id": 3558744,
-    "name": "Fomento",
-    "country": "CU",
-    "coord": {
-      "lon": -79.721672,
-      "lat": 22.103889
-    }
-  },
-  {
-    "id": 7668824,
-    "name": "Provincia Artemisa",
-    "country": "CU",
-    "coord": {
-      "lon": -82.756058,
-      "lat": 22.813999
-    }
-  },
-  {
-    "id": 3541999,
-    "name": "Rodas",
-    "country": "CU",
-    "coord": {
-      "lon": -80.55722,
-      "lat": 22.34083
-    }
-  },
-  {
-    "id": 3556077,
-    "name": "Jobabo",
-    "country": "CU",
-    "coord": {
-      "lon": -76.299438,
-      "lat": 20.96917
-    }
-  },
-  {
-    "id": 3557801,
-    "name": "Guanajay",
-    "country": "CU",
-    "coord": {
-      "lon": -82.6875,
-      "lat": 22.92639
-    }
-  },
-  {
-    "id": 3558315,
-    "name": "Gibara",
-    "country": "CU",
-    "coord": {
-      "lon": -76.131668,
-      "lat": 21.10972
-    }
-  },
-  {
-    "id": 3746938,
-    "name": "Baguanos",
-    "country": "CU",
-    "coord": {
-      "lon": -76.026939,
-      "lat": 20.751671
+      "lon": -82.481941,
+      "lat": 21.83333
     }
   }
 ]

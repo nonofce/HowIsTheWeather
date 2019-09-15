@@ -30,6 +30,7 @@ class MainActivity : AppCompatActivity() {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
         setSupportActionBar(toolbar)
 
+
         binding.fab.setOnClickListener {
 
             val pos = (citySpinner.adapter as CitySpinnerAdapter).getPosition(weatherViewModel.defaultCity)
@@ -94,7 +95,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun loadCities() {
-//        val cityList: MutableList<WorldCity> = getListOfCities()
         weatherViewModel.getListOfCities(assets)
         val me = this
         binding.inner.citySpinner.apply {

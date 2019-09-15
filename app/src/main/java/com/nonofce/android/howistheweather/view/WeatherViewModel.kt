@@ -3,9 +3,11 @@ package com.nonofce.android.howistheweather.view
 import android.content.res.AssetManager
 import android.util.Log
 import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.liveData
 import com.google.gson.Gson
+import com.nonofce.android.howistheweather.data.response.Main
 import com.nonofce.android.howistheweather.domain.CurrentWeather
 import com.nonofce.android.howistheweather.domain.WorldCity
 import com.nonofce.android.howistheweather.repository.WeatherRepository
@@ -54,7 +56,7 @@ class WeatherViewModel(private val repository: WeatherRepository) : ViewModel() 
             val cities = JSONArray(jsonFile)
             for (i in 0 until cities.length()) {
                 val city = Gson().fromJson(cities[i].toString(), WorldCity::class.java)
-                if (city.id == 3553478) {
+                if (city.id == 3564073) {
                     defaultCity = city
                 }
                 cityList.add(city)
