@@ -4,7 +4,6 @@
         xmlns:app="http://schemas.android.com/apk/res-auto">
     <data>
         <variable name="weatherMainData" type="com.nonofce.android.howistheweather.data.response.Main"/>
-        <variable name="weatherViewModel" type="com.nonofce.android.howistheweather.view.WeatherViewModel"/>
     </data>
 
 
