@@ -4,6 +4,7 @@ import androidx.lifecycle.ViewModelProviders
 import com.google.gson.Gson
 import com.nonofce.android.howistheweather.data.WeatherApi
 import com.nonofce.android.howistheweather.repository.WeatherRepository
+import com.nonofce.android.howistheweather.view.SettingsViewModel
 import com.nonofce.android.howistheweather.view.WeatherViewModel
 import okhttp3.OkHttpClient
 import org.koin.androidx.viewmodel.dsl.viewModel
@@ -15,6 +16,9 @@ import retrofit2.converter.gson.GsonConverterFactory
 val viewModelModule = module {
     viewModel {
         WeatherViewModel(get())
+    }
+    viewModel {
+        SettingsViewModel()
     }
 }
 

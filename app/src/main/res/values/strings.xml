@@ -9,6 +9,21 @@
     <string name="minimum_temperature">Minimum Temperature</string>
     <string name="maximum_temperature">Maximum Temperature</string>
     <string name="world_cities">Cuba Cities</string>
-    <string name="cities_identifier">  %1$s  </string>
+    <string name="cities_identifier">%1$s</string>
     <string name="current_weather_condition">Current weather condition</string>
+    <string name="title_activity_settings">Settings</string>
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Preferred City</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails</string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
 </resources>

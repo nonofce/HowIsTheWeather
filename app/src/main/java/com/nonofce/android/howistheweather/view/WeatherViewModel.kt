@@ -24,7 +24,7 @@ class WeatherViewModel(private val repository: WeatherRepository) : ViewModel() 
 
     init {
         currentWeather = CurrentWeather(null)
-        Log.d("WeatherViewModel", "WeatherViewModel created")
+        Log.d("WeatherViewModel--", "WeatherViewModel created")
 
     }
 
@@ -45,7 +45,7 @@ class WeatherViewModel(private val repository: WeatherRepository) : ViewModel() 
 
     override fun onCleared() {
         super.onCleared()
-        Log.d("WeatherViewModel", "WeatherViewModel cleared")
+        Log.d("WeatherViewModel--", "WeatherViewModel cleared")
     }
 
     fun getListOfCities(assets: AssetManager) {
